@@ -24,9 +24,10 @@ Note that the `data/` folder contains extra data used for running experiments. I
 
 Our file naming conventions use [Hugging Face language codes](https://huggingface.co/languages) when referring to a language's identity (e.g. English --> en).
 
-## Metadata
+## Croissant Files
 
-The Croissant metadata for the datasets in `winogrande-mmlu-clinical-za/` (the unzipped version of the release dataset file `winogrande-mmlu-clinical-za.zip`) may be found here (URL Pending).
+The Croissant files for the datasets in `winogrande-mmlu-clinical-za/` (the unzipped version of the release dataset file `winogrande-mmlu-clinical-za.zip`) may be found here for
+[*Winogrande-ZA*](https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za/raw/main/croissant-winogrande_za.json), [*MMLU-Clinical-ZA*](https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za/raw/main/croissant-mmlu_clinical_za.json), and [*Winogrande-ZA-old*](https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za/raw/main/croissant-winogrande_za_old.json).
 
 [//]: # (Below is a mapping of language to language code used in the experiments and in file naming:)
 
