@@ -1,0 +1,2667 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "MMLU-Clinical-ZA",
+  "description": "The Measuring Massive Multitask Language Understanding (MMLU) general knowledge question-answering LLM evaluation benchmark (sourced from https://github.com/hendrycks/test) clinical_knowledge and college_medicine sections human-translated into each of the South African Languages Afrikaans, Zulu, and Xhosa using Translated.com. The original English version of these sections is also included.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "@article{,\n  title={Expanding Reasoning Benchmarks in Low-Resourced African Languages: Winogrande and Clinical MMLU in Afrikaans, Xhosa, and Zulu},\n  author={Tuka Alhanai and Adam Kasumovic and Mohammad Ghassemi and Guillaume Chabot-Couture},\n  year={2024}\n}",
+  "datePublished": "2024-06-06 00:00:00",
+  "inLanguage": [
+    "en",
+    "af",
+    "xh",
+    "zu"
+  ],
+  "license": "MIT",
+  "url": "https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "github-repository",
+      "name": "github-repository",
+      "description": "InstituteforDiseaseModeling repository on GitHub.",
+      "contentUrl": "https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-dev-en_file_set",
+      "name": "clinical-knowledge-dev-en_file_set",
+      "description": "MMLU Clinical Knowledge section dev split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_dev.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-dev-af_file_set",
+      "name": "clinical-knowledge-dev-af_file_set",
+      "description": "MMLU Clinical Knowledge section dev split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_dev_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-dev-zu_file_set",
+      "name": "clinical-knowledge-dev-zu_file_set",
+      "description": "MMLU Clinical Knowledge section dev split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_dev_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-dev-xh_file_set",
+      "name": "clinical-knowledge-dev-xh_file_set",
+      "description": "MMLU Clinical Knowledge section dev split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_dev_xh.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-test-en_file_set",
+      "name": "clinical-knowledge-test-en_file_set",
+      "description": "MMLU Clinical Knowledge section test split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_test.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-test-af_file_set",
+      "name": "clinical-knowledge-test-af_file_set",
+      "description": "MMLU Clinical Knowledge section test split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_test_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-test-zu_file_set",
+      "name": "clinical-knowledge-test-zu_file_set",
+      "description": "MMLU Clinical Knowledge section test split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_test_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-test-xh_file_set",
+      "name": "clinical-knowledge-test-xh_file_set",
+      "description": "MMLU Clinical Knowledge section test split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_test_xh.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-val-en_file_set",
+      "name": "clinical-knowledge-val-en_file_set",
+      "description": "MMLU Clinical Knowledge section val split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_val.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-val-af_file_set",
+      "name": "clinical-knowledge-val-af_file_set",
+      "description": "MMLU Clinical Knowledge section val split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_val_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-val-zu_file_set",
+      "name": "clinical-knowledge-val-zu_file_set",
+      "description": "MMLU Clinical Knowledge section val split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_val_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "clinical-knowledge-val-xh_file_set",
+      "name": "clinical-knowledge-val-xh_file_set",
+      "description": "MMLU Clinical Knowledge section val split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/clinical_knowledge_val_xh.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-dev-en_file_set",
+      "name": "college-medicine-dev-en_file_set",
+      "description": "MMLU College Medicine section dev split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_dev.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-dev-af_file_set",
+      "name": "college-medicine-dev-af_file_set",
+      "description": "MMLU College Medicine section dev split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_dev_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-dev-zu_file_set",
+      "name": "college-medicine-dev-zu_file_set",
+      "description": "MMLU College Medicine section dev split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_dev_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-dev-xh_file_set",
+      "name": "college-medicine-dev-xh_file_set",
+      "description": "MMLU College Medicine section dev split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_dev_xh.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-test-en_file_set",
+      "name": "college-medicine-test-en_file_set",
+      "description": "MMLU College Medicine section test split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_test.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-test-af_file_set",
+      "name": "college-medicine-test-af_file_set",
+      "description": "MMLU College Medicine section test split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_test_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-test-zu_file_set",
+      "name": "college-medicine-test-zu_file_set",
+      "description": "MMLU College Medicine section test split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_test_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-test-xh_file_set",
+      "name": "college-medicine-test-xh_file_set",
+      "description": "MMLU College Medicine section test split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_test_xh.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-val-en_file_set",
+      "name": "college-medicine-val-en_file_set",
+      "description": "MMLU College Medicine section val split in English",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_val.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-val-af_file_set",
+      "name": "college-medicine-val-af_file_set",
+      "description": "MMLU College Medicine section val split in Afrikaans",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_val_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-val-zu_file_set",
+      "name": "college-medicine-val-zu_file_set",
+      "description": "MMLU College Medicine section val split in Zulu",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_val_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "college-medicine-val-xh_file_set",
+      "name": "college-medicine-val-xh_file_set",
+      "description": "MMLU College Medicine section val split in Xhosa",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/mmlu_clinical_za/college_medicine_val_xh.csv"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-dev-en",
+      "name": "clinical-knowledge-dev-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-dev-af",
+      "name": "clinical-knowledge-dev-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-dev-zu",
+      "name": "clinical-knowledge-dev-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-dev-xh",
+      "name": "clinical-knowledge-dev-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-dev-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-test-en",
+      "name": "clinical-knowledge-test-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-test-af",
+      "name": "clinical-knowledge-test-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-test-zu",
+      "name": "clinical-knowledge-test-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-test-xh",
+      "name": "clinical-knowledge-test-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-test-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-test-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-val-en",
+      "name": "clinical-knowledge-val-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-val-af",
+      "name": "clinical-knowledge-val-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-val-zu",
+      "name": "clinical-knowledge-val-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical-knowledge-val-xh",
+      "name": "clinical-knowledge-val-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical-knowledge-val-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "clinical-knowledge-val-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-dev-en",
+      "name": "college-medicine-dev-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-dev-af",
+      "name": "college-medicine-dev-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-dev-zu",
+      "name": "college-medicine-dev-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-dev-xh",
+      "name": "college-medicine-dev-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-dev-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-dev-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-test-en",
+      "name": "college-medicine-test-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-test-af",
+      "name": "college-medicine-test-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-test-zu",
+      "name": "college-medicine-test-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-test-xh",
+      "name": "college-medicine-test-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-test-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-test-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-val-en",
+      "name": "college-medicine-val-en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-en/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-en_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-val-af",
+      "name": "college-medicine-val-af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-af/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-af_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-val-zu",
+      "name": "college-medicine-val-zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-zu/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-zu_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "college-medicine-val-xh",
+      "name": "college-medicine-val-xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/Question",
+          "name": "Question",
+          "description": "The MMLU Question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/OptionA",
+          "name": "OptionA",
+          "description": "Option corresponding to answer choice A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/OptionB",
+          "name": "OptionB",
+          "description": "Option corresponding to answer choice B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/OptionC",
+          "name": "OptionC",
+          "description": "Option corresponding to answer choice C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/OptionD",
+          "name": "OptionD",
+          "description": "Option corresponding to answer choice D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "OptionD"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "college-medicine-val-xh/Answer",
+          "name": "Answer",
+          "description": "Correct option (a letter A, B, C, or D)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "college-medicine-val-xh_file_set"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

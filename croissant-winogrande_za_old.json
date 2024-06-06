@@ -1,0 +1,447 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "Winogrande-ZA-old",
+  "description": "The Winogrande commonsense reasoning LLM evaluation benchmark (sourced from https://github.com/allenai/winogrande) train_s, test, and dev sections human-translated into each of the South African Languages Afrikaans, Zulu, and Xhosa using Upwork.com translators (one initial translation round only). The original English version of these sections is also included.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "@article{,\n  title={Expanding Reasoning Benchmarks in Low-Resourced African Languages: Winogrande and Clinical MMLU in Afrikaans, Xhosa, and Zulu},\n  author={Tuka Alhanai and Adam Kasumovic and Mohammad Ghassemi and Guillaume Chabot-Couture},\n  year={2024}\n}",
+  "datePublished": "2024-06-06 00:00:00",
+  "inLanguage": [
+    "en",
+    "af",
+    "xh",
+    "zu"
+  ],
+  "license": "MIT",
+  "url": "https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "github-repository",
+      "name": "github-repository",
+      "description": "InstituteforDiseaseModeling repository on GitHub.",
+      "contentUrl": "https://github.com/InstituteforDiseaseModeling/winogrande-mmlu-clinical-za",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "en_file_set",
+      "name": "en_file_set",
+      "description": "Winogrande (Train S + Dev + Test) in English (old version)",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/winogrande_za_old/winogrande.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "af_file_set",
+      "name": "af_file_set",
+      "description": "Winogrande (Train S + Dev + Test) in Afrikaans (old version)",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/winogrande_za_old/winogrande_af.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "zu_file_set",
+      "name": "zu_file_set",
+      "description": "Winogrande (Train S + Dev + Test) in Zulu (old version)",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/winogrande_za_old/winogrande_zu.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "xh_file_set",
+      "name": "xh_file_set",
+      "description": "Winogrande (Train S + Dev + Test) in Xhosa (old version)",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "winogrande-mmlu-clinical-za/winogrande_za_old/winogrande_xh.csv"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "en",
+      "name": "en",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "en/qID",
+          "name": "qID",
+          "description": "Unique identifier for the question. The last character denotes the answer. Corresponds with the same qIDs in the new version following a second round of corrections and can therefore be joined with the new dataset to compare translation quality or obtain splits.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "en_file_set"
+            },
+            "extract": {
+              "column": "qID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "en/sentence",
+          "name": "English Sentence",
+          "description": "English sentence that is missing a word or a few words (denoted with an underscore), requiring one of two options to best fill in the missing word or words.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "en_file_set"
+            },
+            "extract": {
+              "column": "sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "en/option1",
+          "name": "English Option 1",
+          "description": "English option 1. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "en_file_set"
+            },
+            "extract": {
+              "column": "option1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "en/option2",
+          "name": "English Option 2",
+          "description": "English option 2. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "en_file_set"
+            },
+            "extract": {
+              "column": "option2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "en/answer",
+          "name": "Answer",
+          "description": "Correct option (a number 1 or 2 corresponding to Option 1 or Option 2). Note that for rows from the original test set, the answer will be listed as 0 since no answer was provided by the original Winogrande creators. However, the answers for the test set rows can be found in the last character of the qID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "en_file_set"
+            },
+            "extract": {
+              "column": "answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "af",
+      "name": "af",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "af/qID",
+          "name": "qID",
+          "description": "Unique identifier for the question. The last character denotes the answer. Corresponds with the same qIDs in the new version following a second round of corrections and can therefore be joined with the new dataset to compare translation quality or obtain splits.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "af_file_set"
+            },
+            "extract": {
+              "column": "qID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "af/sentence",
+          "name": "Afrikaans Sentence",
+          "description": "Afrikaans sentence that is missing a word or a few words (denoted with an underscore), requiring one of two options to best fill in the missing word or words.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "af_file_set"
+            },
+            "extract": {
+              "column": "sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "af/option1",
+          "name": "Afrikaans Option 1",
+          "description": "Afrikaans option 1. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "af_file_set"
+            },
+            "extract": {
+              "column": "option1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "af/option2",
+          "name": "Afrikaans Option 2",
+          "description": "Afrikaans option 2. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "af_file_set"
+            },
+            "extract": {
+              "column": "option2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "af/answer",
+          "name": "Answer",
+          "description": "Correct option (a number 1 or 2 corresponding to Option 1 or Option 2). Note that for rows from the original test set, the answer will be listed as 0 since no answer was provided by the original Winogrande creators. However, the answers for the test set rows can be found in the last character of the qID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "af_file_set"
+            },
+            "extract": {
+              "column": "answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "zu",
+      "name": "zu",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "zu/qID",
+          "name": "qID",
+          "description": "Unique identifier for the question. The last character denotes the answer. Corresponds with the same qIDs in the new version following a second round of corrections and can therefore be joined with the new dataset to compare translation quality or obtain splits.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "zu_file_set"
+            },
+            "extract": {
+              "column": "qID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zu/sentence",
+          "name": "Zulu Sentence",
+          "description": "Zulu sentence that is missing a word or a few words (denoted with an underscore), requiring one of two options to best fill in the missing word or words.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "zu_file_set"
+            },
+            "extract": {
+              "column": "sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zu/option1",
+          "name": "Zulu Option 1",
+          "description": "Zulu option 1. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "zu_file_set"
+            },
+            "extract": {
+              "column": "option1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zu/option2",
+          "name": "Zulu Option 2",
+          "description": "Zulu option 2. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "zu_file_set"
+            },
+            "extract": {
+              "column": "option2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zu/answer",
+          "name": "Answer",
+          "description": "Correct option (a number 1 or 2 corresponding to Option 1 or Option 2). Note that for rows from the original test set, the answer will be listed as 0 since no answer was provided by the original Winogrande creators. However, the answers for the test set rows can be found in the last character of the qID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "zu_file_set"
+            },
+            "extract": {
+              "column": "answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "xh",
+      "name": "xh",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "xh/qID",
+          "name": "qID",
+          "description": "Unique identifier for the question. The last character denotes the answer. Corresponds with the same qIDs in the new version following a second round of corrections and can therefore be joined with the new dataset to compare translation quality or obtain splits.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "xh_file_set"
+            },
+            "extract": {
+              "column": "qID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "xh/sentence",
+          "name": "Xhosa Sentence",
+          "description": "Xhosa sentence that is missing a word or a few words (denoted with an underscore), requiring one of two options to best fill in the missing word or words.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "xh_file_set"
+            },
+            "extract": {
+              "column": "sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "xh/option1",
+          "name": "Xhosa Option 1",
+          "description": "Xhosa option 1. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "xh_file_set"
+            },
+            "extract": {
+              "column": "option1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "xh/option2",
+          "name": "Xhosa Option 2",
+          "description": "Xhosa option 2. A word or a few words that may be the option to best fill in the underscore in the corresponding sentence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "xh_file_set"
+            },
+            "extract": {
+              "column": "option2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "xh/answer",
+          "name": "Answer",
+          "description": "Correct option (a number 1 or 2 corresponding to Option 1 or Option 2). Note that for rows from the original test set, the answer will be listed as 0 since no answer was provided by the original Winogrande creators. However, the answers for the test set rows can be found in the last character of the qID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "xh_file_set"
+            },
+            "extract": {
+              "column": "answer"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
