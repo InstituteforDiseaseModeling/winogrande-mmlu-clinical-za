@@ -116,7 +116,7 @@ Where `{dataset}` is one of `mmlu` or `winogrande` and `{lang_code}` is one of `
 
 ### Table 2: **Results of State-of-the-Art Models on Translated Benchmarks** 
 
-Top state-of-the-art models were evaluated on the translated Winogrande-ZA (binary-choice co-reference resolution task), the translated MMLU-Clinical-ZA (multiple-choice clinical knowledge reasoning task), as well a pre-existing benchmark Belebele (reading comprehension task). Results are provided for the three low-resource African languages of focus: Afrikaans (*af*), Zulu (*zu*), and Xhosa (*xh*). Results on English (*en*) are also provided as a reference. Best performance is indicated with an underline. GPT-4o out-of-the-box is the best performing model across all benchmarks, except for English on Belebele, where GPT-4 performs better.
+Top state-of-the-art models were evaluated on the translated Winogrande-ZA (binary-choice co-reference resolution task), the translated MMLU-Clinical-ZA (multiple-choice clinical knowledge reasoning task), as well a pre-existing benchmark [Belebele](https://github.com/facebookresearch/belebele) (reading comprehension task). Results are provided for the three low-resource African languages of focus: Afrikaans (*af*), Zulu (*zu*), and Xhosa (*xh*). Results on English (*en*) are also provided as a reference. Best performance is indicated with an underline. GPT-4o out-of-the-box is the best performing model across all benchmarks, except for English on Belebele, where GPT-4 performs better.
 
 ![assets/out_of_the_box.png](assets/out_of_the_box.png)
 
