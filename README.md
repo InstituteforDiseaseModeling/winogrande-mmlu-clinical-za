@@ -7,8 +7,8 @@ This repository contains the benchmarks, translation results, and all code neede
 
 <u>More specifically, This repository contains:</u>
 
-1. **Winogrande-ZA Benchmark:** Translations of a popular multiple-choice reasoning benchmark, Winogrande, into three South African languages: Afrikaans, Zulu, and Xhosa,
-2. **MMLU-Clinical-ZA Benchmark:** Translations of the clinical sections (college medicine and clinical knowledge) of MMLU into three South African languages: Afrikaans, Zulu, and Xhosa, and,
+1. **Winogrande-ZA Benchmark:** Translations of a popular multiple-choice reasoning benchmark, [Winogrande](https://github.com/allenai/winogrande), into three South African languages: Afrikaans, Zulu, and Xhosa,
+2. **MMLU-Clinical-ZA Benchmark:** Translations of the clinical sections (college medicine and clinical knowledge) of [MMLU](https://github.com/hendrycks/test) into three South African languages: Afrikaans, Zulu, and Xhosa, and,
 3. **Mono- and Cross-Lingual Benchmark Scripts:** Code used to regenerate the mono- and cross-lingual fine-tuning experiments presented in the paper. 
 
 ## Benchmark Download
