@@ -1,0 +1,2 @@
+python3 experiments/translation_similarity/test_mmlu_translations.py
+python3 experiments/translation_similarity/test_winogrande_translations.py

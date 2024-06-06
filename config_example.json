@@ -1,0 +1,6 @@
+{
+  "google_translate_api_key": "your-key-here",
+  "huggingface_read_token": "your-key-here",
+  "openai_key": "your-key-here",
+  "openai_org": "your-org-here"
+}
