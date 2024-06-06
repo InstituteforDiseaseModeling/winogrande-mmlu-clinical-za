@@ -1,4 +1,4 @@
-qID,EnglishSentence,EnglishOption1,EnglishOption2,Answer,Split
+qID,English Sentence,English Option 1,English Option 2,Answer,Split
 3QHITW7OYO7Q6B6ISU2UMJB84ZLAQE-2,Ian volunteered to eat Dennis's menudo after already having a bowl because _ despised eating intestine.,Ian,Dennis,2,train_s
 3QHITW7OYO7Q6B6ISU2UMJB84ZLAQE-1,Ian volunteered to eat Dennis's menudo after already having a bowl because _ enjoyed eating intestine.,Ian,Dennis,1,train_s
 3XWUWJ18TLO2DDRXF83QWLKRJ29UU4-1,"He never comes to my home, but I always go to his house because the _ is smaller.",home,house,1,train_s
