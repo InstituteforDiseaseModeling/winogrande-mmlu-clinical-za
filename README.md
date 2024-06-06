@@ -7,8 +7,8 @@ This repository contains the benchmarks, translation results, and all code neede
 
 <u>More specifically, This repository contains:</u>
 
-1. **Winogrande-ZA Benchmark:** Translations of a popular multiple-choice reasoning benchmark, Winogrande, into three South African languages: Afrikaans, Zulu, and Xhosa,
-2. **MMLU-Clinical-ZA Benchmark:** Translations of the clinical sections (college medicine and clinical knowledge) of MMLU into three South African languages: Afrikaans, Zulu, and Xhosa, and,
+1. **Winogrande-ZA Benchmark:** Translations of a popular multiple-choice reasoning benchmark, [Winogrande](https://github.com/allenai/winogrande), into three South African languages: Afrikaans, Zulu, and Xhosa,
+2. **MMLU-Clinical-ZA Benchmark:** Translations of the clinical sections (college medicine and clinical knowledge) of [MMLU](https://github.com/hendrycks/test) into three South African languages: Afrikaans, Zulu, and Xhosa, and,
 3. **Mono- and Cross-Lingual Benchmark Scripts:** Code used to regenerate the mono- and cross-lingual fine-tuning experiments presented in the paper. 
 
 ## Benchmark Download
@@ -116,7 +116,7 @@ Where `{dataset}` is one of `mmlu` or `winogrande` and `{lang_code}` is one of `
 
 ### Table 2: **Results of State-of-the-Art Models on Translated Benchmarks** 
 
-Top state-of-the-art models were evaluated on the translated Winogrande-ZA (binary-choice co-reference resolution task), the translated MMLU-Clinical-ZA (multiple-choice clinical knowledge reasoning task), as well a pre-existing benchmark Belebele (reading comprehension task). Results are provided for the three low-resource African languages of focus: Afrikaans (*af*), Zulu (*zu*), and Xhosa (*xh*). Results on English (*en*) are also provided as a reference. Best performance is indicated with an underline. GPT-4o out-of-the-box is the best performing model across all benchmarks, except for English on Belebele, where GPT-4 performs better.
+Top state-of-the-art models were evaluated on the translated Winogrande-ZA (binary-choice co-reference resolution task), the translated MMLU-Clinical-ZA (multiple-choice clinical knowledge reasoning task), as well a pre-existing benchmark [Belebele](https://github.com/facebookresearch/belebele) (reading comprehension task). Results are provided for the three low-resource African languages of focus: Afrikaans (*af*), Zulu (*zu*), and Xhosa (*xh*). Results on English (*en*) are also provided as a reference. Best performance is indicated with an underline. GPT-4o out-of-the-box is the best performing model across all benchmarks, except for English on Belebele, where GPT-4 performs better.
 
 ![assets/out_of_the_box.png](assets/out_of_the_box.png)
 
@@ -188,6 +188,9 @@ For example,
 `sample-model-on-zu-mmlu-college_medicine-0-answer-B`
 
 indicates the row where `sample-model` answered the first question in the Zulu version of MMLU's college medicine test section, where the correct answer was `B`.
+
+## Disclaimer
+The code in this repository was developed by IDM, the Bill & Melinda Gates Foundation, and [Ghamut Corporation](https://ghamut.com/) to further research in Large Language Models (LLMs) for low-resource African languages by allowing them to be evaluated on question-answering and commonsense reasoning tasks, like those commonly available in English. We’ve made it publicly available under the MIT License to provide others with a better understanding of our research and an opportunity to build upon it for their own work. We make no representations that the code works as intended or that we will provide support, address issues that are found, or accept pull requests. You are welcome to create your own fork and modify the code to suit your own modeling needs as contemplated under the MIT License.
 
 ## Citation
 ```
