@@ -190,7 +190,7 @@ For example,
 indicates the row where `sample-model` answered the first question in the Zulu version of MMLU's college medicine test section, where the correct answer was `B`.
 
 ## Disclaimer
-The code in this repository was developed by IDM, the Bill & Melinda Gates Foundation, and Ghamut Corporation to further research in LLMs for low-resource African languages by allowing them to evaluated on question-answering and commonsense reasoning tasks, like those commonly available in English. We’ve made it publicly available under the MIT License to provide others with a better understanding of our research and an opportunity to build upon it for their own work. We make no representations that the code works as intended or that we will provide support, address issues that are found, or accept pull requests. You are welcome to create your own fork and modify the code to suit your own modeling needs as contemplated under the MIT License.
+The code in this repository was developed by IDM, the Bill & Melinda Gates Foundation, and [Ghamut Corporation](https://ghamut.com/) to further research in Large Language Models (LLMs) for low-resource African languages by allowing them to be evaluated on question-answering and commonsense reasoning tasks, like those commonly available in English. We’ve made it publicly available under the MIT License to provide others with a better understanding of our research and an opportunity to build upon it for their own work. We make no representations that the code works as intended or that we will provide support, address issues that are found, or accept pull requests. You are welcome to create your own fork and modify the code to suit your own modeling needs as contemplated under the MIT License.
 
 ## Citation
 ```
