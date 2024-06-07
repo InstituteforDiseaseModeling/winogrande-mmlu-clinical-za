@@ -151,7 +151,7 @@ else:
     # Create map of every single generation
     complete_jsonl = []
     for model_name in desired_models:
-        full_path = os.path.join(output_dir, f'generations_{model_name}.jsonl')
+        full_path = os.path.join(output_dir, f'generations_{model_name}_{timestamp}.jsonl')
         with open(full_path, 'r') as fp:
             complete_jsonl.append(pd.read_json(fp, lines=True))
 
