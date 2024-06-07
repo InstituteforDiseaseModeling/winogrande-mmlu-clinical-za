@@ -185,8 +185,8 @@ else:
             q_cnt = 0
 
             for section in sections:
-                # Skip evaluating college_medicine MMLU on college_medicine
-                if section == 'college_medicine' and 'mmlu-' in this_model.lower():
+                # Skip evaluating college_medicine
+                if section == 'college_medicine':
                     continue
 
                 # Construct the pattern
