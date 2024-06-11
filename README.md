@@ -20,7 +20,7 @@ winogrande-mmlu-clinical-za/
 ├── winogrande_za/             # Contains the second version of Winogrande following a second round of Upwork translator corrections       
 └── winogrande_za_old/         # Contains the original, first version of Winogrande translated by the first round of Upwork translators            
 ```
-Note that the `data/` folder contains extra data used for running experiments. It is **not** the release data folder. `assets/` simply contains pictures for this README file, but all other folders in this repository have their own READMEs with some additional explanation (they are also mentioned further down in this README).
+Note that the `data/` folder contains extra data used for running experiments. It is **not** the release data folder. `assets/` simply contains pictures for this README file and `supplement/` contains scripts to reproduce the supplementary materials experiment results; the remaining folders in this repository have their own READMEs with some additional explanation (they are also mentioned further down in this README).
 
 Our file naming conventions use [Hugging Face language codes](https://huggingface.co/languages) when referring to a language's identity (e.g. English --> en).
 
