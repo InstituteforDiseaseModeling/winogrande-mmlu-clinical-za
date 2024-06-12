@@ -2,7 +2,7 @@ import os
 import json
 from openai import OpenAI
 from time import sleep
-BASE_MODEL = 'gpt-4'  # As of June 5, 2024, GPT-4 fine-tuning requires special access via request to OpenAI.
+BASE_MODEL = 'gpt-4-0613'  # As of June 5, 2024, GPT-4 fine-tuning requires special access via request to OpenAI.
 SEED = 42
 SIMULTANEOUS_FINE_TUNING_LIMIT = 3
 
